@@ -26,7 +26,7 @@ const Hero = () => {
                 At-Large Councilor Candidate
               </h3>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Working to make Somerville a city of more: more housing, more
+                Ben wants to make Somerville a city of more: more housing, more
                 neighbors, more thriving businesses, and more vibrant squares.
               </p>
             </div>

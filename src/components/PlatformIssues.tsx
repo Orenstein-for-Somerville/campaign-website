@@ -6,23 +6,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const PlatformIssues = () => {
   const issues = [
     {
-      title: "Housing Shortage",
-      description: "Creating affordable and accessible housing options for all Somerville residents.",
-      details: "I believe everyone deserves a place to call home in our community. I will work to increase housing supply through smart development, preserve existing affordable housing, and implement tenant protections to prevent displacement.",
+      title: "End the Housing Shortage",
+      description: "Let's actually take it seriously!",
+      details: "Housing is expensive because we've made it illegal to build sufficient supply. Ben is committed to aggressive upzoning, streamlined permitting, and building thousands of new homes fast. Taller height limits? Absolutely. A tower in Davis Square? How about five?",
       icon: Building,
       color: "bg-blue-50 text-campaign-blue",
     },
     {
-      title: "Street Infrastructure",
-      description: "Making our streets safer for cyclists, pedestrians, and all forms of transit.",
-      details: "I will advocate for protected bike lanes, wider sidewalks, traffic calming measures, and better public transportation options. Our streets should be safe and accessible for everyone, regardless of how they choose to travel.",
+      title: "Pedestrianizing Davis Square",
+      description: "Because cars and people don't mix",
+      details: "If there's anywhere in Somerville where we should prioritize people over traffic, it's Elm Street in Davis Square. Let's take back this street for pedestrians and watch businesses in Davis thrive. And while we're at it, let's reeork the square so you can stay on your bike while riding through on the Community Path.",
       icon: Bike,
       color: "bg-teal-50 text-campaign-teal",
     },
     {
-      title: "Public Squares",
-      description: "Revitalizing Davis, Magoun, Inman, and Ball Squares into vibrant community spaces.",
-      details: "Our public squares should be the heart of our neighborhoods. I will work to enhance these spaces with better seating, green infrastructure, community events, and support for local businesses that make these areas thrive.",
+      title: "100,000 Somervillians",
+      description: "Restoring our missing population",
+      details: "In 1950, Somerville's population was over 100,000. Today, it's only 80,000. A shrinking city hurts local businesses, and reduces city revenue leading to limited services. Ben will make the changes needed to attract recent graduates, new families, immigrants, and retiring seniors.",
       icon: MapPin,
       color: "bg-amber-50 text-campaign-orange",
     },
@@ -33,10 +33,10 @@ const PlatformIssues = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-campaign-blue md:text-4xl font-serif">
-            Key Platform Issues
+            Ben's Goals
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            I'm focused on addressing the most pressing needs of our community, with practical solutions that can make a real difference in how we live, work, and play in Somerville.
+            Somerville is a great city, but it can be even greater with a few key changes:
           </p>
         </div>
 

@@ -8,35 +8,38 @@ const AboutBen = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <h2 className="mb-4 text-3xl font-bold text-campaign-blue md:text-4xl font-serif">
+            <h2 className="mb-8 text-3xl font-bold text-campaign-blue md:text-4xl font-serif">
               About Ben Orenstein
             </h2>
             <p className="mb-6 text-lg text-gray-600">
-              As a long-time Somerville resident and community advocate, I've dedicated myself to making our city more vibrant, accessible, and affordable for everyone.
+              Ben is running for Somerville City Council At Large to make our
+              city more affordable, <span class="italic">just like it was when he first arrived</span>.
             </p>
 
-            <div className="mb-8 space-y-4">
-              <div>
-                <h3 className="text-xl font-semibold text-campaign-teal">Experience</h3>
-                <p className="text-gray-600">
-                  With a background in community organizing and urban planning, I've worked directly with residents, local businesses, and city officials to develop practical solutions for our city's most pressing challenges.
-                </p>
-              </div>
+            <p className="mb-6 text-lg text-gray-600">
+              In 2006, Ben moved to Somerville and found a room near Teele Square for just $575 a month. 
+              That affordable start helped him build a
+              career in tech, pursue his passion for music, and eventually
+              <span class="font-bold"> co-found a successful software company
+                right here in Somerville</span>. Now, with deep civic
+              involvement and a proven track record of solving hard problems, he’s ready
+              to help others find that same opportunity.
+            </p>
 
-              <div>
-                <h3 className="text-xl font-semibold text-campaign-teal">Vision</h3>
-                <p className="text-gray-600">
-                  I envision a Somerville where everyone can afford to live, where our streets are safe for all users, and where our public spaces foster community connections and local businesses thrive.
-                </p>
-              </div>
+            <p className="mb-6 text-lg text-gray-600">
+              Ben is already engaged in Somerville's civic life: he attends
+              most City Council meetings, helped write an early draft of the
+              Davis Square Neighborhood Council’s bylaws, and created <a href="https://somervillebeacon.com">The Somerville Beacon</a> to inform residents about their government.
+            </p>
 
-              <div>
-                <h3 className="text-xl font-semibold text-campaign-teal">Commitment</h3>
-                <p className="text-gray-600">
-                  I'm committed to transparent, accountable, and accessible leadership. I believe in listening to all voices in our community and working collaboratively to address our shared challenges.
-                </p>
-              </div>
-            </div>
+            <p className="mb-6 text-lg text-gray-600">
+              Ben is running because our housing shortage is a political
+              problem, not a physical one—and it’s time we had leaders with the
+              courage to act. If elected, Ben will fight to build more housing,
+              support local businesses, and revitalize our public spaces—so
+              Somerville works for everyone, not just the lucky few who got
+              here early.
+            </p>
 
             <Button className="bg-campaign-blue hover:bg-campaign-blue/90">
               Learn More About Ben
