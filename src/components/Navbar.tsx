@@ -39,8 +39,10 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-campaign-teal hover:bg-campaign-teal/90">
-              Donate
+            <Button className="bg-campaign-teal hover:bg-campaign-teal/90" asChild>
+              <a href="https://secure.actblue.com/donate/bens-friends" target="_blank" rel="noopener noreferrer">
+                Donate
+              </a>
             </Button>
           </div>
 
@@ -79,8 +81,15 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
-          <Button className="mt-4 w-full bg-campaign-teal hover:bg-campaign-teal/90">
-            Donate
+          <Button className="mt-4 w-full bg-campaign-teal hover:bg-campaign-teal/90" asChild>
+            <a 
+              href="https://secure.actblue.com/donate/bens-friends" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              Donate
+            </a>
           </Button>
         </div>
       </div>
