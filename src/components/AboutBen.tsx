@@ -14,7 +14,7 @@ const AboutBen = () => {
             <p className="mb-6 text-lg text-gray-600">
               As a long-time Somerville resident and community advocate, I've dedicated myself to making our city more vibrant, accessible, and affordable for everyone.
             </p>
-            
+
             <div className="mb-8 space-y-4">
               <div>
                 <h3 className="text-xl font-semibold text-campaign-teal">Experience</h3>
@@ -22,14 +22,14 @@ const AboutBen = () => {
                   With a background in community organizing and urban planning, I've worked directly with residents, local businesses, and city officials to develop practical solutions for our city's most pressing challenges.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold text-campaign-teal">Vision</h3>
                 <p className="text-gray-600">
                   I envision a Somerville where everyone can afford to live, where our streets are safe for all users, and where our public spaces foster community connections and local businesses thrive.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold text-campaign-teal">Commitment</h3>
                 <p className="text-gray-600">
@@ -37,12 +37,12 @@ const AboutBen = () => {
                 </p>
               </div>
             </div>
-            
+
             <Button className="bg-campaign-blue hover:bg-campaign-blue/90">
               Learn More About Ben
             </Button>
           </div>
-          
+
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-campaign-teal to-campaign-blue opacity-25 blur"></div>
@@ -50,7 +50,7 @@ const AboutBen = () => {
                 <div className="h-full w-full bg-gray-200">
                   {/* Placeholder for Ben's image */}
                   <div className="flex h-full items-center justify-center bg-gray-100 text-gray-500">
-                    Ben Orenstein
+                    <img src="/the-crew.png"></img>
                   </div>
                 </div>
               </div>

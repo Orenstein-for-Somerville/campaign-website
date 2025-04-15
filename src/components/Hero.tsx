@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative isolate overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_100%,rgba(44,177,188,0.15),transparent)]" />
@@ -12,9 +12,9 @@ const Hero = () => {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl">
           <div className="flex flex-col sm:flex-row items-center gap-8">
             <div className="flex-shrink-0">
-              <img 
-                src="/placeholder.svg" 
-                alt="Ben Orenstein" 
+              <img
+                src="/headshot.png"
+                alt="Ben Orenstein"
                 className="w-48 h-48 rounded-full object-cover border-4 border-campaign-teal shadow-lg"
               />
             </div>
@@ -23,11 +23,11 @@ const Hero = () => {
                 Ben Orenstein for Somerville
               </h2>
               <h3 className="mt-2 text-2xl font-medium text-campaign-teal sm:text-3xl">
-                At Large Councilor
+                At-Large Councilor Candidate
               </h3>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Building a more vibrant, accessible, and affordable Somerville for everyone.
-                Together, we can enhance our public spaces, address housing needs, and create safer streets.
+                Working to make Somerville a city of more: more housing, more
+                neighbors, more thriving businesses, and more vibrant squares.
               </p>
             </div>
           </div>
