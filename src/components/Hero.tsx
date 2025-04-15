@@ -11,16 +11,27 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_100%,rgba(44,177,188,0.15),transparent)]" />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-4xl font-bold tracking-tight text-campaign-blue sm:text-6xl font-serif">
-            Ben Orenstein for Somerville
-          </h2>
-          <h3 className="mt-2 text-2xl font-medium text-campaign-teal sm:text-3xl">
-            At Large Councilor
-          </h3>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Building a more vibrant, accessible, and affordable Somerville for everyone.
-            Together, we can enhance our public spaces, address housing needs, and create safer streets.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <img 
+                src="/placeholder.svg" 
+                alt="Ben Orenstein" 
+                className="w-48 h-48 rounded-full object-cover border-4 border-campaign-teal shadow-lg"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold tracking-tight text-campaign-blue sm:text-6xl font-serif">
+                Ben Orenstein for Somerville
+              </h2>
+              <h3 className="mt-2 text-2xl font-medium text-campaign-teal sm:text-3xl">
+                At Large Councilor
+              </h3>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Building a more vibrant, accessible, and affordable Somerville for everyone.
+                Together, we can enhance our public spaces, address housing needs, and create safer streets.
+              </p>
+            </div>
+          </div>
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-6">
             <Button className="w-full sm:w-auto px-8 py-6 text-base bg-campaign-blue hover:bg-campaign-blue/90">
               Join Our Campaign
