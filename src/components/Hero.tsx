@@ -35,7 +35,11 @@ const Hero = () => {
             <Button className="w-full sm:w-auto px-8 py-6 text-base bg-campaign-blue hover:bg-campaign-blue/90">
               Join Our Campaign
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto px-8 py-6 text-base border-campaign-teal text-campaign-teal hover:bg-campaign-teal/10">
+            <Button 
+              variant="outline" 
+              className="w-full sm:w-auto px-8 py-6 text-base border-campaign-teal text-campaign-teal hover:bg-campaign-teal/10"
+              onClick={() => document.getElementById('issues')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Learn About My Platform
             </Button>
           </div>

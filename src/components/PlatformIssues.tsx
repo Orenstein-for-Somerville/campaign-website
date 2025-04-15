@@ -13,9 +13,9 @@ const PlatformIssues = () => {
       color: "bg-blue-50 text-campaign-blue",
     },
     {
-      title: "Pedestrianizing Davis Square",
+      title: "Pedestrianize Davis Square",
       description: "Because cars and people don't mix",
-      details: "If there's anywhere in Somerville where we should prioritize people over traffic, it's Elm Street in Davis Square. Let's take back this street for pedestrians and watch businesses in Davis thrive. And while we're at it, let's reeork the square so you can stay on your bike while riding through on the Community Path.",
+      details: "If there's anywhere in Somerville where we should prioritize people over traffic, it's Elm Street in Davis Square. Let's take back this street for pedestrians and watch businesses in Davis thrive. And while we're at it, let's rework the square so you can stay on your bike while riding through on the Community Path.",
       icon: Bike,
       color: "bg-teal-50 text-campaign-teal",
     },

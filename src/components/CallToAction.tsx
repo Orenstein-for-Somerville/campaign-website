@@ -15,7 +15,7 @@ const CallToAction = () => {
     console.log("Email submitted:", email);
     setSubmitted(true);
     setEmail("");
-    
+
     // Reset the submitted state after 3 seconds
     setTimeout(() => {
       setSubmitted(false);
@@ -30,10 +30,9 @@ const CallToAction = () => {
             Join Our Campaign
           </h2>
           <p className="mb-8 text-lg text-blue-100">
-            There are many ways to help create the Somerville we all deserve.
-            Join our campaign today and make a difference in our community.
+            If you're excited about Ben's platform, we'd love to have you support our campaign!
           </p>
-          
+
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm transition-transform hover:scale-105">
               <div className="mb-4 flex justify-center">
@@ -43,11 +42,13 @@ const CallToAction = () => {
               <p className="mb-4 text-blue-100">
                 Support our campaign with a contribution of any size. Every dollar helps us reach more voters.
               </p>
-              <Button className="w-full bg-campaign-orange hover:bg-campaign-orange/90 text-white">
-                Contribute
+              <Button className="w-full bg-campaign-orange hover:bg-campaign-orange/90 text-white" asChild>
+                <a href="https://secure.actblue.com/donate/bens-friends" target="_blank" rel="noopener noreferrer">
+                  Contribute
+                </a>
               </Button>
             </div>
-            
+
             <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm transition-transform hover:scale-105">
               <div className="mb-4 flex justify-center">
                 <Users className="h-10 w-10 text-campaign-teal" />
@@ -60,7 +61,7 @@ const CallToAction = () => {
                 Sign Up
               </Button>
             </div>
-            
+
             <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm transition-transform hover:scale-105">
               <div className="mb-4 flex justify-center">
                 <Calendar className="h-10 w-10 text-white" />

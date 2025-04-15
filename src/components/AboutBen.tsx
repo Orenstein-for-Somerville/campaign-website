@@ -29,27 +29,22 @@ const AboutBen = () => {
             <p className="mb-6 text-lg text-gray-600">
               Ben is already engaged in Somerville's civic life: he attends
               most City Council meetings, helped write an early draft of the
-              Davis Square Neighborhood Council’s bylaws, and created <a href="https://somervillebeacon.com">The Somerville Beacon</a> to inform residents about their government.
+              Davis Square Neighborhood Council’s bylaws, and created <a href="https://somervillebeacon.com" className="text-campaign-blue hover:text-campaign-teal underline transition-colors">The Somerville Beacon</a> to inform residents about their government.
             </p>
 
             <p className="mb-6 text-lg text-gray-600">
-              Ben is running because our housing shortage is a political
-              problem, not a physical one—and it’s time we had leaders with the
-              courage to act. If elected, Ben will fight to build more housing,
-              support local businesses, and revitalize our public spaces—so
-              Somerville works for everyone, not just the lucky few who got
-              here early.
+              Ben is running because our housing shortage is primarily a
+              political problem, and it’s time we had leaders with the courage
+              to act. If elected, Ben will fight to build more housing, support
+              local businesses, and revitalize our public spaces—so Somerville
+              works for everyone, not just the lucky few who got here early.
             </p>
-
-            <Button className="bg-campaign-blue hover:bg-campaign-blue/90">
-              Learn More About Ben
-            </Button>
           </div>
 
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-campaign-teal to-campaign-blue opacity-25 blur"></div>
-              <div className="relative aspect-square w-full max-w-[400px] overflow-hidden rounded-lg bg-white shadow-xl">
+              <div className="relative aspect-square w-full max-w-[520px] overflow-hidden rounded-lg bg-white shadow-xl">
                 <div className="h-full w-full bg-gray-200">
                   {/* Placeholder for Ben's image */}
                   <div className="flex h-full items-center justify-center bg-gray-100 text-gray-500">

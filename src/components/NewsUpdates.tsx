@@ -7,25 +7,28 @@ import { ArrowRight } from "lucide-react";
 const NewsUpdates = () => {
   const newsItems = [
     {
-      title: "Campaign Kickoff Event at Davis Square",
-      date: "April 20, 2025",
+      title: "Campaign Kickoff Event in Davis Square",
+      date: "May 13th, 2025",
       excerpt:
-        "Join us for our official campaign launch with speeches, local performers, and community conversations about Somerville's future.",
+        "Join us for our official campaign launch for speeches and conversations about Somerville's future.",
       category: "Event",
+      url: "https://secure.actblue.com/donate/orenstein-kickoff"
     },
     {
       title: "Housing Policy Proposal Released",
-      date: "April 10, 2025",
+      date: "April 6, 2025",
       excerpt:
-        "Today we released our comprehensive plan to address Somerville's housing challenges through increased supply and tenant protections.",
+        "Read about Ben's plan to automatically address our housing shortage through a single ordinance.",
       category: "Policy",
+      url: "https://www.somervillebeacon.com/p/how-to-actually-solve-a-housing-shortage"
     },
     {
-      title: "Community Clean-Up at Magoun Square",
-      date: "April 5, 2025",
+      title: "See Ben sing at PorchFest",
+      date: "May 10, 2025",
       excerpt:
-        "We had a great turnout for our community clean-up event. Thanks to all the volunteers who helped beautify Magoun Square!",
+        "Ben will perform with his barbershop quartet at PorchFest this year. Come to 28 Newberne St between 12 and 2 to see him.",
       category: "Community",
+      url: "/events/magoun-square-cleanup" // Example relative URL
     },
   ];
 
@@ -58,19 +61,36 @@ const NewsUpdates = () => {
               <CardContent>
                 <p className="text-gray-600">{item.excerpt}</p>
               </CardContent>
-              <CardFooter>
-                <Button variant="ghost" className="group p-0 text-campaign-teal hover:text-campaign-blue">
-                  Read More{" "}
-                  <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <div className="px-6 pb-6">
+                <Button 
+                  variant="ghost" 
+                  className="group px-3 text-campaign-teal hover:text-campaign-blue -ml-3"
+                  asChild
+                >
+                  <a 
+                    href={item.url} 
+                    target={item.url.startsWith('http') ? "_blank" : "_self"} 
+                    rel={item.url.startsWith('http') ? "noopener noreferrer" : ""}
+                    className="flex items-center"
+                  >
+                    Read More{" "}
+                    <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
-              </CardFooter>
+              </div>
             </Card>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" className="border-campaign-teal text-campaign-teal hover:bg-campaign-teal/10">
-            View All Updates
+          <Button 
+            variant="outline" 
+            className="border-campaign-teal text-campaign-teal hover:bg-campaign-teal/10"
+            asChild
+          >
+            <a href="/news">
+              View All Updates
+            </a>
           </Button>
         </div>
       </div>

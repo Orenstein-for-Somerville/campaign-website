@@ -60,9 +60,7 @@ const Footer = () => {
             <ul className="space-y-2 text-blue-100">
               <li className="flex items-center">
                 <Mail className="mr-2 h-4 w-4" />
-                <a href="mailto:ben@benforsomderville.com" className="hover:text-white transition-colors">
-                  ben@benforsomerville.com
-                </a>
+                <a href="mailto:ben@orensteinforsomerville.com" className="hover:text-white transition-colors">ben@orensteinforsomerville.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-4 w-4" />
@@ -81,7 +79,7 @@ const Footer = () => {
 
         <div className="mt-12 border-t border-white/20 pt-6 text-center">
           <p className="text-sm text-blue-200">
-            Paid for by the Committee to Elect Ben Orenstein &copy; {new Date().getFullYear()}. All Rights Reserved.
+            Paid for by The Orenstein Committee &copy; {new Date().getFullYear()}. All Rights Reserved.
           </p>
         </div>
       </div>
