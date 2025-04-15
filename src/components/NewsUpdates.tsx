@@ -23,7 +23,7 @@ const NewsUpdates = () => {
       url: "https://www.somervillebeacon.com/p/how-to-actually-solve-a-housing-shortage"
     },
     {
-      title: "See Ben sing at PorchFest",
+      title: "See Ben sing at PorchFest!",
       date: "May 10, 2025",
       excerpt:
         "Ben will perform with his barbershop quartet at PorchFest this year. Come to 28 Newberne St between 12 and 2 to see him.",
