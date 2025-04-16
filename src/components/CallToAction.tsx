@@ -4,22 +4,59 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Heart, Calendar, Users } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const CallToAction = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would connect to a mailing list service
-    console.log("Email submitted:", email);
-    setSubmitted(true);
-    setEmail("");
-
-    // Reset the submitted state after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
+    setIsSubmitting(true);
+    
+    try {
+      // Submit to Airtable
+      const response = await fetch('https://api.airtable.com/v0/appmdNjPjTLQP8fTS/Campaign%20website%20subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.AIRTABLE_API_KEY}`
+        },
+        body: JSON.stringify({
+          records: [
+            {
+              fields: {
+                Email: email,
+                Source: 'Website Subscribe Form'
+              }
+            }
+          ]
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to subscribe');
+      }
+      
+      setSubmitted(true);
+      setEmail("");
+      
+      // Reset the submitted state after 3 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Subscription failed",
+        description: "There was a problem subscribing you. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -85,8 +122,12 @@ const CallToAction = () => {
                       required
                       className="bg-white/20 text-white placeholder:text-blue-200 border-white/20 focus-visible:ring-campaign-teal"
                     />
-                    <Button type="submit" className="w-full bg-white text-campaign-blue hover:bg-blue-50">
-                      Subscribe
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-white text-campaign-blue hover:bg-blue-50"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Subscribing..." : "Subscribe"}
                     </Button>
                   </div>
                 ) : (
