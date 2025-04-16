@@ -32,7 +32,6 @@ exports.handler = async function(event, context) {
           {
             fields: {
               Email: email,
-              Source: 'Website Subscribe Form'
             }
           }
         ]
