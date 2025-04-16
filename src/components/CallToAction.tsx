@@ -18,11 +18,11 @@ const CallToAction = () => {
 
     try {
       // Submit to Airtable
-      const response = await fetch('https://api.airtable.com/v0/appmdNjPjTLQP8fTS/Campaign%20website%20subscribers', {
+      const response = await fetch('https://api.airtable.com/v0/appmdNjPjTLQP8fTS/tblOQEVotqxuoeOZQ', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.AIRTABLE_API_KEY}`
+          'Authorization': `Bearer ${import.meta.env.VITE_AIRTABLE_API_KEY}`
         },
         body: JSON.stringify({
           records: [
