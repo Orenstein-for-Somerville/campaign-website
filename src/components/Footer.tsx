@@ -14,11 +14,11 @@ const Footer = () => {
               Somerville, Massachusetts
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61574869330087" className="text-blue-100 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+              <a href="https://x.com/r00k" className="text-blue-100 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
