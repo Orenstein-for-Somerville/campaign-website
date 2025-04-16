@@ -22,7 +22,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+              <a href="https://instagram.com/orensteinforsomerville" className="text-blue-100 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
@@ -62,16 +62,16 @@ const Footer = () => {
                 <Mail className="mr-2 h-4 w-4" />
                 <a href="mailto:ben@orensteinforsomerville.com" className="hover:text-white transition-colors">ben@orensteinforsomerville.com</a>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <Phone className="mr-2 h-4 w-4" />
                 <a href="tel:6175551234" className="hover:text-white transition-colors">
                   (617) 555-1234
                 </a>
-              </li>
+              </li> */}
             </ul>
             <div className="mt-6">
               <p className="text-sm text-blue-200">
-                Campaign HQ: 123 Davis Square, Somerville, MA 02144
+                Campaign HQ: Maxwells Green, Somerville, MA 02144
               </p>
             </div>
           </div>

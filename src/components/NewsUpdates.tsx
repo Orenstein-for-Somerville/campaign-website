@@ -82,7 +82,7 @@ const NewsUpdates = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <Button 
             variant="outline" 
             className="border-campaign-teal text-campaign-teal hover:bg-campaign-teal/10"
@@ -92,7 +92,7 @@ const NewsUpdates = () => {
               View All Updates
             </a>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
