@@ -62,7 +62,46 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy with Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/becadf3f-7109-4589-8340-b8fab4cada4d) and click on Share -> Publish.
+
+### Deploy to Netlify
+
+This project uses Netlify Functions for secure backend operations (like Airtable integration).
+
+1. Connect your GitHub repository to Netlify
+
+2. Configure build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Functions directory: `netlify/functions`
+
+3. Set the following environment variables in the Netlify dashboard:
+   - `AIRTABLE_API_KEY` - Your Airtable API key for subscriber form
+   
+4. Deploy your site
+
+### Testing Netlify Functions Locally
+
+To test the serverless functions locally before deploying:
+
+1. Install the Netlify CLI dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Create a `.env` file in the project root with your API keys:
+   ```
+   AIRTABLE_API_KEY=your_api_key_here
+   ```
+
+3. Run the Netlify dev server:
+   ```bash
+   npm run netlify-dev
+   ```
+
+This will start a local development server that includes both your frontend and the Netlify Functions.
 
 ## Can I connect a custom domain to my Lovable project?
 

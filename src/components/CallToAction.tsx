@@ -17,21 +17,14 @@ const CallToAction = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit to Airtable
-      const response = await fetch('https://api.airtable.com/v0/appmdNjPjTLQP8fTS/tblOQEVotqxuoeOZQ', {
+      // Submit to our Netlify function instead of directly to Airtable
+      const response = await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_AIRTABLE_API_KEY}`
         },
         body: JSON.stringify({
-          records: [
-            {
-              fields: {
-                Email: email,
-              }
-            }
-          ]
+          email: email
         })
       });
 
