@@ -15,7 +15,7 @@ const CallToAction = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Submit to Airtable
       const response = await fetch('https://api.airtable.com/v0/appmdNjPjTLQP8fTS/Campaign%20website%20subscribers', {
@@ -35,14 +35,14 @@ const CallToAction = () => {
           ]
         })
       });
-      
+
       if (!response.ok) {
         throw new Error('Failed to subscribe');
       }
-      
+
       setSubmitted(true);
       setEmail("");
-      
+
       // Reset the submitted state after 3 seconds
       setTimeout(() => {
         setSubmitted(false);
@@ -122,8 +122,8 @@ const CallToAction = () => {
                       required
                       className="bg-white/20 text-white placeholder:text-blue-200 border-white/20 focus-visible:ring-campaign-teal"
                     />
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full bg-white text-campaign-blue hover:bg-blue-50"
                       disabled={isSubmitting}
                     >
