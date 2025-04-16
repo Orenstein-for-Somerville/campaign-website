@@ -57,8 +57,8 @@ const CallToAction = () => {
               <p className="mb-4 text-blue-100">
                 Join our team of dedicated volunteers. We need help with canvassing, phone banking, and events.
               </p>
-              <Button className="w-full bg-campaign-teal hover:bg-campaign-teal/90 text-white">
-                Sign Up
+              <Button className="w-full bg-campaign-teal hover:bg-campaign-teal/90 text-white" asChild>
+                <a href="https://airtable.com/appmdNjPjTLQP8fTS/pag5GmJTm7FP7ChVC/form" target="_blank" rel="noopener noreferrer">Sign Up</a>
               </Button>
             </div>
 

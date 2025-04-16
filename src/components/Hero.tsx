@@ -32,8 +32,11 @@ const Hero = () => {
             </div>
           </div>
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-6">
-            <Button className="w-full sm:w-auto px-8 py-6 text-base bg-campaign-blue hover:bg-campaign-blue/90">
-              Join Our Campaign
+            <Button 
+              className="w-full sm:w-auto px-8 py-6 text-base bg-campaign-blue hover:bg-campaign-blue/90"
+              asChild
+            >
+              <a href="https://airtable.com/appmdNjPjTLQP8fTS/pag5GmJTm7FP7ChVC/form" target="_blank" rel="noopener noreferrer">Join Our Campaign</a>
             </Button>
             <Button 
               variant="outline" 
