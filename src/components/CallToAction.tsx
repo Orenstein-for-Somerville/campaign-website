@@ -29,7 +29,6 @@ const CallToAction = () => {
             {
               fields: {
                 Email: email,
-                Source: 'Website Subscribe Form'
               }
             }
           ]
