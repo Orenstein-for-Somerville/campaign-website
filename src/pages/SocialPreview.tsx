@@ -50,8 +50,18 @@ const SocialPreview = () => {
         setCustomDescription(document.querySelector('meta[name="description"]')?.getAttribute('content') || "");
       }
       
-      if (ogImage) setCustomImage(ogImage);
-      else setCustomImage(`${currentUrl}/headshot.png`);
+      // Ensure image URLs are absolute
+      if (ogImage) {
+        // Check if the URL is already absolute
+        if (ogImage.startsWith('http://') || ogImage.startsWith('https://')) {
+          setCustomImage(ogImage);
+        } else {
+          // Convert relative URL to absolute
+          setCustomImage(`${currentUrl}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`);
+        }
+      } else {
+        setCustomImage(`${currentUrl}/headshot.png`);
+      }
       
       if (ogUrl) setSiteUrl(ogUrl);
       
@@ -168,9 +178,21 @@ const SocialPreview = () => {
                   onChange={(e) => setCustomImage(e.target.value)}
                 />
                 <div className="border rounded p-2 mt-1">
-                  <img src={customImage} alt="Preview" className="h-20 object-contain mx-auto" onError={(e) => {
-                    e.currentTarget.src = "/headshot.png";
-                  }} />
+                  <div className="flex justify-center items-center">
+                    <img 
+                      src={customImage} 
+                      alt="Preview" 
+                      className="h-36 object-contain mx-auto" 
+                      onError={(e) => {
+                        console.error("Image load error:", e);
+                        e.currentTarget.src = "/headshot.png";
+                      }} 
+                    />
+                  </div>
+                  <div className="mt-2 text-xs text-muted-foreground break-all">
+                    <p className="font-semibold">Current image URL:</p>
+                    <code className="bg-muted/50 p-1 rounded">{customImage}</code>
+                  </div>
                 </div>
               </div>
               <div className="space-y-2">
@@ -246,6 +268,7 @@ const SocialPreview = () => {
                           alt="Preview"
                           className="w-full h-64 object-cover"
                           onError={(e) => {
+                            console.error("Facebook preview image load error");
                             e.currentTarget.src = "/headshot.png";
                           }}
                         />
@@ -296,6 +319,7 @@ const SocialPreview = () => {
                             alt="Preview"
                             className="w-full h-56 object-cover"
                             onError={(e) => {
+                              console.error("Twitter preview image load error");
                               e.currentTarget.src = "/headshot.png";
                             }}
                           />
@@ -361,6 +385,7 @@ const SocialPreview = () => {
                               alt="Preview"
                               className="w-full h-full object-cover rounded"
                               onError={(e) => {
+                                console.error("Slack preview image load error");
                                 e.currentTarget.src = "/headshot.png";
                               }}
                             />
