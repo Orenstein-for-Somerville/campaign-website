@@ -7,14 +7,6 @@ import { ArrowRight } from "lucide-react";
 const NewsUpdates = () => {
   const newsItems = [
     {
-      title: "Campaign Kickoff Event in Davis Square",
-      date: "May 13th, 2025",
-      excerpt:
-        "Join us for our official campaign launch for speeches and conversations about Somerville's future.",
-      category: "Event",
-      url: "https://secure.actblue.com/donate/orenstein-kickoff"
-    },
-    {
       title: "Housing Policy Proposal Released",
       date: "April 6, 2025",
       excerpt:
@@ -28,7 +20,15 @@ const NewsUpdates = () => {
       excerpt:
         "Ben will perform with his barbershop quartet at PorchFest this year. Come to 28 Newberne St between 12 and 2 to see him.",
       category: "Community",
-      url: "/events/magoun-square-cleanup" // Example relative URL
+      url: ""
+    },
+    {
+      title: "Campaign Kickoff Event in Davis Square",
+      date: "May 13th, 2025",
+      excerpt:
+        "Join us for our official campaign launch for speeches and conversations about Somerville's future.",
+      category: "Event",
+      url: "https://secure.actblue.com/donate/orenstein-kickoff"
     },
   ];
 
@@ -61,23 +61,25 @@ const NewsUpdates = () => {
               <CardContent>
                 <p className="text-gray-600">{item.excerpt}</p>
               </CardContent>
-              <div className="px-6 pb-6">
-                <Button 
-                  variant="ghost" 
-                  className="group px-3 text-campaign-teal hover:text-campaign-blue -ml-3"
-                  asChild
-                >
-                  <a 
-                    href={item.url} 
-                    target={item.url.startsWith('http') ? "_blank" : "_self"} 
-                    rel={item.url.startsWith('http') ? "noopener noreferrer" : ""}
-                    className="flex items-center"
+              {item.url && (
+                <div className="px-6 pb-6">
+                  <Button 
+                    variant="ghost" 
+                    className="group px-3 text-campaign-teal hover:text-campaign-blue -ml-3"
+                    asChild
                   >
-                    Read More{" "}
-                    <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
-              </div>
+                    <a 
+                      href={item.url} 
+                      target={item.url.startsWith('http') ? "_blank" : "_self"} 
+                      rel={item.url.startsWith('http') ? "noopener noreferrer" : ""}
+                      className="flex items-center"
+                    >
+                      Read More{" "}
+                      <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </Button>
+                </div>
+              )}
             </Card>
           ))}
         </div>
