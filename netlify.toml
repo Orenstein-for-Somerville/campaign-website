@@ -2,3 +2,9 @@
   publish = "dist"
   command = "npm run build"
   functions = "netlify/functions"
+
+# This redirect rule ensures that all routes are handled by the React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
