@@ -59,11 +59,17 @@ const AboutBen = () => {
               {/* Frame */}
               <div className="relative rounded-2xl overflow-hidden bg-white z-10 p-2 shadow-2xl shadow-gray-200/50 ring-1 ring-gray-100">
                 <div className="aspect-square w-full max-w-[520px] overflow-hidden rounded-xl">
-                  <img
-                    src="/the-crew.png"
-                    alt="Ben with campaign supporters"
-                    className="h-full w-full object-cover"
-                  />
+                  <picture>
+                    <source srcSet="/images/optimized/the-crew.webp" type="image/webp" />
+                    <img
+                      src="/the-crew.png"
+                      alt="Ben with campaign supporters"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      width="800"
+                      height="800"
+                    />
+                  </picture>
                 </div>
 
               </div>

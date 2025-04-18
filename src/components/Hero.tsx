@@ -29,11 +29,17 @@ const Hero = () => {
                 
                 {/* Main image with refined border */}
                 <div className="relative rounded-2xl bg-white p-2 shadow-xl shadow-campaign-blue/5 ring-1 ring-gray-200/30">
-                  <img
-                    src="/headshot.png"
-                    alt="Ben Orenstein"
-                    className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-xl shadow-sm"
-                  />
+                  <picture>
+                    <source srcSet="/images/optimized/headshot.webp" type="image/webp" />
+                    <img
+                      src="/headshot.png"
+                      alt="Ben Orenstein"
+                      className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-xl shadow-sm"
+                      loading="eager"
+                      width="768"
+                      height="768"
+                    />
+                  </picture>
                   
                   {/* Color accent elements */}
                   <div className="absolute -bottom-3 -right-3 h-24 w-24 rounded-full bg-campaign-teal opacity-20 blur-xl"></div>
