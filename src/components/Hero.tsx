@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32"
+      className="relative isolate overflow-hidden bg-gradient-to-b from-white to-gray-50 py-16 sm:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_100%,rgba(44,177,188,0.15),transparent)]" />
       <div className="mx-auto max-w-7xl px-6 lg:px-16 xl:px-24">

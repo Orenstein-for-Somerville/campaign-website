@@ -10,7 +10,7 @@ const KickoffEvent = () => {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section with Decorative Background */}
-        <section className="relative py-28 lg:py-36 overflow-hidden">
+        <section className="relative py-20 lg:py-28 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-campaign-blue via-campaign-blue to-campaign-teal opacity-90 z-0"></div>
           
           {/* Decorative elements */}
@@ -102,7 +102,7 @@ const KickoffEvent = () => {
         </div>
 
         {/* Event Details Section */}
-        <section id="details" className="py-20 bg-gray-50">
+        <section id="details" className="py-14 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mb-16 text-center">
               <div className="inline-flex items-center justify-center mb-4">
@@ -111,7 +111,7 @@ const KickoffEvent = () => {
                 <span className="h-px w-8 bg-campaign-teal ml-4"></span>
               </div>
               <h2 className="mb-4 text-3xl font-bold text-campaign-blue md:text-4xl lg:text-5xl font-serif">
-                A Night to Remember
+                The Start of Something Big
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Join us as we launch a campaign focused on making Somerville more affordable and vibrant for everyone.
@@ -163,7 +163,7 @@ const KickoffEvent = () => {
         </section>
 
         {/* Why Support Section */}
-        <section className="py-24 bg-white relative">
+        <section className="py-16 bg-white relative">
           <div className="absolute inset-0 bg-gradient-to-br from-campaign-blue/5 to-campaign-teal/5"></div>
           <div className="container relative mx-auto px-4 md:px-6 z-10">
             <div className="max-w-3xl mx-auto text-center mb-16">
