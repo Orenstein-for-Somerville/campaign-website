@@ -32,11 +32,17 @@ const PlatformIssues = () => {
     <section id="issues" className="py-24 bg-campaign-lightgray">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-campaign-blue md:text-4xl font-serif">
-            Ben's Goals
+          <div className="inline-flex items-center px-3 py-1 mb-4 rounded-full bg-campaign-blue/10 text-campaign-blue text-sm font-medium">
+            <span className="block h-1.5 w-1.5 rounded-full bg-campaign-blue mr-2"></span>
+            Platform & Priorities
+          </div>
+          
+          <h2 className="mb-4 text-3xl font-bold text-campaign-blue md:text-5xl font-serif tracking-tight">
+            Ben's Vision for Somerville
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            Somerville is a great city, but it can be even greater with a few key changes:
+          
+          <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-600 leading-relaxed">
+            Somerville is a great city, but together we can make it even better with these key priorities:
           </p>
         </div>
 

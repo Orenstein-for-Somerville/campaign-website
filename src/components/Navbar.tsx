@@ -31,23 +31,29 @@ const Navbar = () => {
       ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-3 md:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-sm border-b border-gray-200/50">
+      <div className="container mx-auto px-6 py-4 md:px-8 lg:px-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             {isHomePage ? (
-              <a href="#home" className="flex items-center space-x-2">
-                <span className="text-xl font-bold text-campaign-blue">Ben Orenstein</span>
-                <span className="hidden text-sm font-medium text-campaign-teal md:inline-block">
-                  for Somerville
-                </span>
+              <a href="#home" className="flex items-center space-x-2 group">
+                <div className="flex items-baseline">
+                  <span className="text-xl font-bold text-campaign-blue tracking-tight transition-colors group-hover:text-campaign-blue/90">Ben Orenstein</span>
+                  <div className="mx-2 h-4 w-px bg-gray-200"></div>
+                  <span className="text-base font-medium text-campaign-teal transition-colors group-hover:text-campaign-teal/90">
+                    for Somerville
+                  </span>
+                </div>
               </a>
             ) : (
-              <Link to="/" className="flex items-center space-x-2">
-                <span className="text-xl font-bold text-campaign-blue">Ben Orenstein</span>
-                <span className="hidden text-sm font-medium text-campaign-teal md:inline-block">
-                  for Somerville
-                </span>
+              <Link to="/" className="flex items-center space-x-2 group">
+                <div className="flex items-baseline">
+                  <span className="text-xl font-bold text-campaign-blue tracking-tight transition-colors group-hover:text-campaign-blue/90">Ben Orenstein</span>
+                  <div className="mx-2 h-4 w-px bg-gray-200"></div>
+                  <span className="text-base font-medium text-campaign-teal transition-colors group-hover:text-campaign-teal/90">
+                    for Somerville
+                  </span>
+                </div>
               </Link>
             )}
           </div>
@@ -73,7 +79,7 @@ const Navbar = () => {
                 </a>
               )
             ))}
-            <Button className="bg-campaign-teal hover:bg-campaign-teal/90" asChild>
+            <Button className="bg-campaign-teal hover:bg-campaign-teal/90 shadow-sm rounded-md font-medium px-5 py-2.5 transition-all text-white" asChild>
               <a href="https://secure.actblue.com/donate/bens-friends" target="_blank" rel="noopener noreferrer">
                 Donate
               </a>
@@ -126,12 +132,12 @@ const Navbar = () => {
               </a>
             )
           ))}
-          <Button className="mt-4 w-full bg-campaign-teal hover:bg-campaign-teal/90" asChild>
+          <Button className="mt-6 w-full bg-campaign-teal hover:bg-campaign-teal/90 shadow-sm rounded-md font-medium px-5 py-3 transition-all text-white" asChild>
             <a 
               href="https://secure.actblue.com/donate/bens-friends" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full"
+              className="w-full flex items-center justify-center"
             >
               Donate
             </a>
