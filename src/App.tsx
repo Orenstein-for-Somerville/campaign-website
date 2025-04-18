@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SocialPreview from "./pages/SocialPreview";
 import KickoffEvent from "./pages/KickoffEvent";
+import CampaignManager from "./pages/CampaignManager";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/social-preview" element={<SocialPreview />} />
           <Route path="/kickoff" element={<KickoffEvent />} />
+          <Route path="/cm" element={<CampaignManager />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
