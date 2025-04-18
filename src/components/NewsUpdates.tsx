@@ -28,7 +28,7 @@ const NewsUpdates = () => {
       excerpt:
         "Join us for our official campaign launch for speeches and conversations about Somerville's future.",
       category: "Event",
-      url: "https://secure.actblue.com/donate/orenstein-kickoff"
+      url: "/kickoff"
     },
   ];
 

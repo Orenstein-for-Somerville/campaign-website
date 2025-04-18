@@ -29,7 +29,7 @@ const AboutBen = () => {
             <p className="mb-6 text-lg text-gray-600">
               Ben is already engaged in Somerville's civic life: he attends
               most City Council meetings, helped write an early draft of the
-              Davis Square Neighborhood Council’s bylaws, and created <a href="https://somervillebeacon.com" className="text-campaign-blue hover:text-campaign-teal underline transition-colors">The Somerville Beacon</a> to inform residents about their government.
+              Davis Square Neighborhood Council’s bylaws, and created <a href="https://somervillebeacon.com" className="text-campaign-blue hover:text-campaign-teal border-b border-campaign-blue/30 hover:border-campaign-teal/50 transition-colors">The Somerville Beacon</a> to inform residents about their government.
             </p>
 
             <p className="mb-6 text-lg text-gray-600">
