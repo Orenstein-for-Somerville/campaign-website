@@ -8,10 +8,10 @@ const Footer = () => {
     <footer id="contact" className="relative bg-campaign-blue text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iLjUiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTYwIDBoLTYwdjYwaDYweiIvPjwvZz48L3N2Zz4=')] bg-[length:30px_30px]"></div>
-      
+
       {/* Decorative gradient */}
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-campaign-teal/20 rounded-full blur-3xl opacity-10 -z-0"></div>
-      
+
       <div className="container relative mx-auto px-6 pt-16 pb-10 md:px-8">
         <div className="grid gap-x-12 gap-y-10 md:grid-cols-12">
           {/* Logo and social column */}
@@ -21,35 +21,35 @@ const Footer = () => {
               <div className="mx-2 h-4 w-px bg-white/20"></div>
               <span className="text-lg text-campaign-teal/90">for Somerville</span>
             </div>
-            
+
             <p className="mb-6 text-blue-100 leading-relaxed">
               Candidate for At-Large City Councilor<br />
               Somerville, Massachusetts
             </p>
-            
+
             <div className="flex space-x-5">
-              <a 
-                href="https://www.facebook.com/profile.php?id=61574869330087" 
+              <a
+                href="https://www.facebook.com/profile.php?id=61574869330087"
                 className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a 
-                href="https://x.com/r00k" 
+              <a
+                href="https://x.com/r00k"
                 className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">X (Twitter)</span>
               </a>
-              <a 
-                href="https://instagram.com/orensteinforsomerville" 
+              <a
+                href="https://instagram.com/orensteinforsomerville"
                 className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
@@ -102,8 +102,8 @@ const Footer = () => {
               <li className="flex items-start">
                 <Mail className="mr-3 h-5 w-5 mt-0.5 text-campaign-teal/70" />
                 <div>
-                  <a 
-                    href="mailto:ben@orensteinforsomerville.com" 
+                  <a
+                    href="mailto:ben@orensteinforsomerville.com"
                     className="hover:text-white transition-colors"
                   >
                     ben@orensteinforsomerville.com
@@ -119,7 +119,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Newsletter signup */}
           <div className="md:col-span-2">
             <h4 className="mb-5 text-lg font-semibold text-white">Important Dates</h4>
@@ -134,14 +134,14 @@ const Footer = () => {
               <li className="flex items-start text-blue-100">
                 <CalendarDays className="mr-3 h-5 w-5 mt-0.5 text-campaign-teal/70" />
                 <div>
-                  <strong className="text-white">Preliminary Election Day:</strong><br />
+                  <strong className="text-white">PreliminarywElection Day:</strong><br />
                   September 16th, 2025
                 </div>
               </li>
             </ul>
           </div>
         </div>
-        
+
         {/* Footer bottom */}
         <div className="mt-14 border-t border-white/10 pt-6 text-center">
           <div className="text-center">
