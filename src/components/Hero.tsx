@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <div className="inline-flex items-center px-3 py-1 mb-6 rounded-full bg-campaign-blue/10 text-campaign-blue text-sm font-medium">
                 <span className="block h-1.5 w-1.5 rounded-full bg-campaign-blue mr-2"></span>
-                Election: November 5, 2025
+                Election: November 4, 2025
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-campaign-blue font-serif leading-tight">

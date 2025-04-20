@@ -135,7 +135,7 @@ const Footer = () => {
                 <CalendarDays className="mr-3 h-5 w-5 mt-0.5 text-campaign-teal/70" />
                 <div>
                   <strong className="text-white">Election Day:</strong><br />
-                  November 5th, 2025
+                  November 4th, 2025
                 </div>
               </li>
             </ul>
