@@ -134,8 +134,8 @@ const Footer = () => {
               <li className="flex items-start text-blue-100">
                 <CalendarDays className="mr-3 h-5 w-5 mt-0.5 text-campaign-teal/70" />
                 <div>
-                  <strong className="text-white">Election Day:</strong><br />
-                  November 4th, 2025
+                  <strong className="text-white">Preliminary Election Day:</strong><br />
+                  September 16th, 2025
                 </div>
               </li>
             </ul>
