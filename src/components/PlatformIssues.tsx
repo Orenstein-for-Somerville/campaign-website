@@ -8,7 +8,7 @@ const PlatformIssues = () => {
     {
       title: "End the Housing Shortage",
       description: "Let's actually take it seriously!",
-      details: "Housing is expensive because we've made it illegal to build sufficient supply. Ben is committed to aggressive upzoning, streamlined permitting, and building thousands of new homes fast. Taller height limits? Absolutely. A tower in Davis Square? Why just one?",
+      details: "Housing is expensive because we've made it illegal to build sufficient supply. Ben is committed to aggressive upzoning, streamlined permitting, and building thousands of new homes fast.",
       icon: Building,
       color: "bg-blue-50 text-campaign-blue",
     },
