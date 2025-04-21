@@ -1,8 +1,7 @@
 
 import React from "react";
-import { Building, MapPin, Bike, Star } from "lucide-react";
+import { Building, MapPin, Bike } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 const PlatformIssues = () => {
   const issues = [
@@ -12,7 +11,6 @@ const PlatformIssues = () => {
       details: "Housing is expensive because we've made it illegal to build sufficient supply. Ben is committed to aggressive upzoning, streamlined permitting, and building thousands of new homes fast. Every Somerville resident deserves an affordable place to call home.",
       icon: Building,
       color: "bg-blue-50 text-campaign-blue",
-      priority: true,
     },
     {
       title: "Pedestrianize Davis Square",
@@ -55,14 +53,7 @@ const PlatformIssues = () => {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white">
                   <issue.icon className="h-6 w-6" />
                 </div>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-xl font-bold">{issue.title}</CardTitle>
-                  {issue.priority && (
-                    <Badge className="ml-2 bg-campaign-blue" variant="secondary">
-                      <Star className="h-3 w-3 mr-1" /> Top Priority
-                    </Badge>
-                  )}
-                </div>
+                <CardTitle className="text-xl font-bold">{issue.title}</CardTitle>
                 <CardDescription className="text-sm opacity-90">
                   {issue.description}
                 </CardDescription>
