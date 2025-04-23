@@ -65,57 +65,71 @@ const NewsUpdates = () => {
         </div>
 
         <div className="grid gap-8 lg:gap-10 md:grid-cols-3 max-w-5xl mx-auto">
-          {newsItems.map((item, index) => (
-            <Card 
-              key={index} 
-              className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl border-0 ring-1 ring-gray-200/80 hover:ring-gray-300/70 bg-white"
-            >
-              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-campaign-blue via-campaign-teal to-campaign-orange opacity-70"></div>
-              
-              <CardHeader className="pt-8 pb-4 px-7">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="inline-flex items-center gap-2">
-                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-50 ${item.iconColor}`}>
-                      <item.icon className="h-4 w-4" />
-                    </div>
-                    <span className="text-sm font-medium text-gray-500">{item.category}</span>
-                  </div>
-                  <span className="text-sm text-gray-400">{item.date}</span>
-                </div>
-                
-                <CardTitle className="text-xl md:text-2xl font-bold text-campaign-blue">
-                  {item.title}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="px-7 pb-4">
-                <p className="text-gray-600 leading-relaxed">{item.excerpt}</p>
-              </CardContent>
-              
-              {item.url && (
-                <div className="px-7 pb-7 pt-2">
-                  <Button 
-                    variant="ghost" 
-                    className="group p-0 font-medium text-campaign-teal hover:text-campaign-blue"
-                    asChild
+          {newsItems.map((item, index) => {
+            // Create the card wrapper
+            const CardWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+              // If there's a URL, make the entire card a link
+              if (item.url) {
+                return (
+                  <a 
+                    href={item.url}
+                    target={item.url.startsWith('http') ? "_blank" : "_self"} 
+                    rel={item.url.startsWith('http') ? "noopener noreferrer" : ""}
+                    className="block h-full cursor-pointer"
                   >
-                    <a 
-                      href={item.url} 
-                      target={item.url.startsWith('http') ? "_blank" : "_self"} 
-                      rel={item.url.startsWith('http') ? "noopener noreferrer" : ""}
-                      className="flex items-center"
-                    >
-                      Read More{" "}
-                      <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
-                  </Button>
-                </div>
-              )}
+                    {children}
+                  </a>
+                );
+              }
               
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-campaign-blue/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </Card>
-          ))}
+              // Otherwise, just return the children
+              return <>{children}</>;
+            };
+            
+            return (
+              <CardWrapper key={index}>
+                <Card 
+                  className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl border-0 ring-1 ring-gray-200/80 hover:ring-gray-300/70 bg-white h-full"
+                >
+                  <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-campaign-blue via-campaign-teal to-campaign-orange opacity-70"></div>
+                  
+                  <CardHeader className="pt-8 pb-4 px-7">
+                    <div className="mb-4 flex items-center justify-between">
+                      <div className="inline-flex items-center gap-2">
+                        <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-50 ${item.iconColor}`}>
+                          <item.icon className="h-4 w-4" />
+                        </div>
+                        <span className="text-sm font-medium text-gray-500">{item.category}</span>
+                      </div>
+                      <span className="text-sm text-gray-400">{item.date}</span>
+                    </div>
+                    
+                    <CardTitle className="text-xl md:text-2xl font-bold text-campaign-blue">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  <CardContent className="px-7 pb-4">
+                    <p className="text-gray-600 leading-relaxed">{item.excerpt}</p>
+                  </CardContent>
+                  
+                  {item.url && (
+                    <div className="px-7 pb-7 pt-2">
+                      <span 
+                        className="inline-flex items-center font-medium text-campaign-teal group-hover:text-campaign-blue"
+                      >
+                        Read More{" "}
+                        <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  )}
+                  
+                  {/* Hover effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-campaign-blue/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </Card>
+              </CardWrapper>
+            );
+          })}
         </div>
 
       </div>
