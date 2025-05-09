@@ -11,16 +11,16 @@ const CampaignEndMessage = () => {
           </h1>
           <div className="prose prose-lg text-gray-700">
             <p className="text-xl mb-6">
-              After careful consideration, I've decided not to run for City Council at this time.
+              I've decided not to run for City Council at this time.
             </p>
             <p className="mb-6">
-              While I'm grateful for the opportunity to have explored this path and for all the encouraging conversations I've had with neighbors and community members, in the end, it just didn't feel right for me at this moment.
+              I'm glad I explored this path, but in the end, it just didn't feel right for me at this moment.
             </p>
             <p className="mb-6">
-              I remain deeply committed to Somerville and will continue to be involved in our community in other ways. I sincerely appreciate everyone who supported me during this exploration.
+              I still love Somerville, and expect to be involved in our community in other ways. I sincerely appreciate everyone who supported me during this exploration.
             </p>
             <p className="mb-10">
-              Thank you for your understanding, and I look forward to staying engaged with the issues that matter to our city.
+              Thank you for your support!
             </p>
             <div>
               <p className="text-xl font-medium text-campaign-blue">
