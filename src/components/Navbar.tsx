@@ -1,34 +1,17 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  
-  const isKickoffPage = location.pathname === "/kickoff";
-  
-  const navItems = isHomePage
-    ? [
-        { name: "Home", href: "#home" },
-        { name: "Issues", href: "#issues" },
-        { name: "About", href: "#about" },
-        { name: "News", href: "#news" },
-        { name: "Contact", href: "#contact" },
-        { name: "Kickoff", href: "/kickoff" },
-      ]
-    : isKickoffPage
-    ? [
-        { name: "Home", href: "/" },
-      ]
-    : [
-        { name: "Home", href: "/" },
-        { name: "Kickoff", href: "/kickoff" },
-      ];
+
+  const navItems = [
+    { name: "Home", href: "/" }
+  ];
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-sm border-b border-gray-200/50">
@@ -36,23 +19,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             {isHomePage ? (
-              <a href="#home" className="flex items-center space-x-2 group">
+              <a href="/" className="flex items-center space-x-2 group">
                 <div className="flex items-baseline">
                   <span className="text-xl font-bold text-campaign-blue tracking-tight transition-colors group-hover:text-campaign-blue/90">Ben Orenstein</span>
-                  <div className="mx-2 h-4 w-px bg-gray-200"></div>
-                  <span className="text-base font-medium text-campaign-teal transition-colors group-hover:text-campaign-teal/90">
-                    for Somerville
-                  </span>
                 </div>
               </a>
             ) : (
               <Link to="/" className="flex items-center space-x-2 group">
                 <div className="flex items-baseline">
                   <span className="text-xl font-bold text-campaign-blue tracking-tight transition-colors group-hover:text-campaign-blue/90">Ben Orenstein</span>
-                  <div className="mx-2 h-4 w-px bg-gray-200"></div>
-                  <span className="text-base font-medium text-campaign-teal transition-colors group-hover:text-campaign-teal/90">
-                    for Somerville
-                  </span>
                 </div>
               </Link>
             )}
@@ -79,11 +54,6 @@ const Navbar = () => {
                 </a>
               )
             ))}
-            <Button className="bg-campaign-teal hover:bg-campaign-teal/90 shadow-sm rounded-md font-medium px-5 py-2.5 transition-all text-white" asChild>
-              <a href="https://secure.actblue.com/donate/bens-friends" target="_blank" rel="noopener noreferrer">
-                Donate
-              </a>
-            </Button>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -132,16 +102,6 @@ const Navbar = () => {
               </a>
             )
           ))}
-          <Button className="mt-6 w-full bg-campaign-teal hover:bg-campaign-teal/90 shadow-sm rounded-md font-medium px-5 py-3 transition-all text-white" asChild>
-            <a 
-              href="https://secure.actblue.com/donate/bens-friends" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center"
-            >
-              Donate
-            </a>
-          </Button>
         </div>
       </div>
     </nav>

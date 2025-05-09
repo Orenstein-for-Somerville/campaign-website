@@ -1,11 +1,8 @@
-import { useEffect } from 'react';
+import React from "react";
+import { Navigate } from "react-router-dom";
 
 const CampaignManager = () => {
-  useEffect(() => {
-    window.location.href = 'https://docs.google.com/document/d/1vkdkECrM_6wDUVa51UMEmPMInbAXNjF5EfgJxFoxja4';
-  }, []);
-
-  return null;
+  return <Navigate to="/" replace />;
 };
 
 export default CampaignManager;
